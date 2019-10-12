@@ -8,12 +8,16 @@
   {{ if isset $.Page.Params $page_param }}
     {{ $.Scratch.Set $scratch_param ($.Page.Param $page_param) }}
   {{ end }}
-
-  {{ if $.Get $param }}
-    {{ $.Scratch.Set $scratch_param ($.Get $param) }}
-  {{end}}
+  
+  {{ $override := ($.Get $param) }}
+  {{ if $override }}
+    {{ if eq "-" $override }}
+      {{ $.Scratch.Set $scratch_param "" }}
+    {{ else }}
+      {{ $.Scratch.Set $scratch_param $override }}
+    {{ end }}
   {{ end }}
-
+{{ end }}
 
 <!-- if title is not set explicitly then we need to beautify the link
      if length of link is more than 32 chars, we will cut it off by 32 and
