@@ -1,6 +1,17 @@
 {{ define "main" }}
 
 <h1>{{ .Title }}</h1>
+
+{{ with .Params.tags }}
+  <div class="taglist">
+    <i data-feather="tag"></i>
+    {{ range . }}
+      {{ $href := print (absURL "tags/") (urlize .) }}
+      <a class="btn btn-sm btn-outline-dark tag-btn" href="{{ $href }}">{{ . }}</a>
+    {{ end }}
+  </div>
+{{ end }}
+
 {{ .Content }}
 
 {{ end }}
