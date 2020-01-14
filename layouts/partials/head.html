@@ -1,6 +1,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  {{ if .IsHome }}<meta name="description" content="{{ $.Site.Params.description }}" /> {{ end }}
+  <meta name="author" content="{{ $.Site.Params.AuthorName }}" />
   {{ hugo.Generator }}
   {{ if .Site.IsServer }}
     {{ $style := resources.Get "scss/style.scss" | toCSS (dict "targetPath" "css/style.css" "enableSourceMap" true) }}
