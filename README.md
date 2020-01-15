@@ -1,11 +1,11 @@
 # SCSS Bootstrap
 
-A vanilla [Bootstrap](https://getbootstrap.com/) theme for [Hugo](https://gohugo.io/). This is a fork of [a different theme](https://github.com/zwbetz-gh/vanilla-bootstrap-hugo-theme/), extending it to use Hugo Pipes for processing Bootstrap's SCSS files. The benefits include:
+A vanilla [Bootstrap](https://getbootstrap.com/) theme for [Hugo](https://gohugo.io/). This is a fork of [a different theme](https://github.com/zwbetz-gh/vanilla-bootstrap-hugo-theme/), extending it to use Hugo Pipes for processing Bootstrap's Sass files for easier theme customization. The benefits include:
 
-* Use variables to make global style changes in multiple places—things like colors and margins can be consistent with a change in a single place
+* Use variables to make global style changes in multiple places—things like [colors](https://getbootstrap.com/docs/4.4/getting-started/theming/#color) and [margins](https://getbootstrap.com/docs/4.4/getting-started/theming/#sass-options) can be consistent with a change in a single place
 * Better organization of base styles and customization
 * Automatically generate one minified css file for your whole site, with no additional dependencies
-* Can include only css for functionality you are interested in
+* Can include only css for functionality you are interested in—no need to import components you don't use in your site
 
 
 ## Table of Contents
