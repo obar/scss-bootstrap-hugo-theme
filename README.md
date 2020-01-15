@@ -1,12 +1,15 @@
-# Vanilla Bootstrap
+# SCSS Bootstrap
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/c8f8a93c-33b9-48bc-b4d8-500c79b1b0ae/deploy-status)](https://app.netlify.com/sites/vanilla-bootstrap-hugo-theme/deploys)
+A vanilla [Bootstrap](https://getbootstrap.com/) theme for [Hugo](https://gohugo.io/). This is a fork of [a different theme](https://github.com/zwbetz-gh/vanilla-bootstrap-hugo-theme/), extending it to use Hugo Pipes for processing Bootstrap's SCSS files. The benefits include:
 
-A vanilla [Bootstrap](https://getbootstrap.com/) theme for [Hugo](https://gohugo.io/). 
+* Use variables to make global style changes in multiple places—things like colors and margins can be consistent with a change in a single place
+* Better organization of base styles and customization
+* Automatically generate one minified css file for your whole site, with no additional dependencies
+* Can include only css for functionality you are interested in
+
 
 ## Table of Contents
 
-* [Demo](#demo)
 * [Minimum Hugo version](#minimum-hugo-version)
 * [Installation](#installation)
 * [Updating](#updating)
@@ -19,10 +22,6 @@ A vanilla [Bootstrap](https://getbootstrap.com/) theme for [Hugo](https://gohugo
     * [bootstrap-card](#bootstrap-card)
 * [Getting help](#getting-help)
 * [Credits](#credits)
-
-## Demo
-
-https://vanilla-bootstrap-hugo-theme.netlify.com/ 
 
 ## Minimum Hugo version
 
@@ -37,7 +36,7 @@ hugo version | grep extended
 From the root of your site:
 
 ```
-git submodule add https://github.com/zwbetz-gh/vanilla-bootstrap-hugo-theme.git themes/vanilla-bootstrap-hugo-theme
+git submodule add https://github.com/obar/scss-bootstrap-hugo-theme.git themes/scss-bootstrap-hugo-theme
 ```
 
 ## Updating
@@ -50,7 +49,7 @@ git submodule update --remote --merge
 
 ## Run example site
 
-From the root of `themes/vanilla-bootstrap-hugo-theme/exampleSite`:
+From the root of `themes/scss-bootstrap-hugo-theme/exampleSite`:
 
 ```
 hugo server --themesDir ../..
@@ -58,7 +57,7 @@ hugo server --themesDir ../..
 
 ## Configuration
 
-Copy `config.yaml` from the [`exampleSite`](https://github.com/zwbetz-gh/vanilla-bootstrap-hugo-theme/tree/master/exampleSite), then edit as desired. 
+Copy `config.yaml` from the [`exampleSite`](https://github.com/obar/scss-bootstrap-hugo-theme/tree/master/exampleSite), then edit as desired.
 
 ## Homepage content
 
@@ -78,7 +77,7 @@ Homepage content goes here.
 
 Uses [Bootstrap blockquotes](https://getbootstrap.com/docs/4.3/content/typography/#blockquotes) to format your blockquotes nicely. Pass the quote inside the shortcode. The `author` argument is optional.
 
-[Here's an actual usage](https://raw.githubusercontent.com/zwbetz-gh/vanilla-bootstrap-hugo-theme/master/exampleSite/content/post/quotes-by-carl-jung.md), and here's an example usage:
+[Here's an actual usage](https://raw.githubusercontent.com/obar/scss-bootstrap-hugo-theme/master/exampleSite/content/post/quotes-by-carl-jung.md), and here's an example usage:
 
 ```
 {{< blockquote author="Carl Jung" >}}
@@ -106,7 +105,7 @@ Uses [Bootstrap tables](https://getbootstrap.com/docs/4.3/content/tables/) to fo
 
 Uses [Bootstrap cards](https://getbootstrap.com/docs/4.3/components/card/) and [Hugo image processing](https://gohugo.io/content-management/image-processing/#readout) to display your [page bundle](https://gohugo.io/content-management/page-bundles/) images nicely. Only the `img`, `command`, and `options` arguments are required.
 
-[Here's an actual usage](https://raw.githubusercontent.com/zwbetz-gh/vanilla-bootstrap-hugo-theme/master/exampleSite/content/post/nasa-images/index.md), and here's an example usage: 
+[Here's an actual usage](https://raw.githubusercontent.com/obar/scss-bootstrap-hugo-theme/master/exampleSite/content/post/nasa-images/index.md), and here's an example usage:
 
 ```
 {{< bootstrap-card 
@@ -122,16 +121,11 @@ style="" >}}
 
 ## Getting help
 
-If you run into an issue that isn't answered by this documentation or the [`exampleSite`](https://github.com/zwbetz-gh/vanilla-bootstrap-hugo-theme/tree/master/exampleSite), then visit the [Hugo forum](https://discourse.gohugo.io/). The folks there are helpful and friendly. **Before** asking your question, be sure to read the [requesting help guidelines](https://discourse.gohugo.io/t/requesting-help/9132). Feel free to tag me in your question, my forum username is [@zwbetz](https://discourse.gohugo.io/u/zwbetz/summary).
+If you run into an issue that isn't answered by this documentation, then visit the [Hugo forum](https://discourse.gohugo.io/). The folks there are helpful and friendly. **Before** asking your question, be sure to read the [requesting help guidelines](https://discourse.gohugo.io/t/requesting-help/9132).
 
 ## Credits
 
 In addition to Bootstrap and Hugo, thank you to:
 
 * [Feather](https://feathericons.com/) for icons
-* [Netlify](https://www.netlify.com/) for deploys
-* [gh-md-toc](https://github.com/ekalinin/github-markdown-toc) for toc generation
-* [vscode](https://code.visualstudio.com/) for text editing
-* [Fedora](https://getfedora.org/), [Xfce](https://www.xfce.org/), and [VirtualBox](https://www.virtualbox.org/) for development environment
-* [befunky](https://www.befunky.com/) for screenshot editing
-* [Freepik](https://www.freepik.com/) and [Flaticon](https://www.flaticon.com/) for favicon
+* [zwbetz-gh](https://github.com/zwbetz-gh/vanilla-bootstrap-hugo-theme/) for creating the initial theme
