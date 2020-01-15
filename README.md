@@ -75,7 +75,7 @@ Homepage content goes here.
 
 ### blockquote
 
-Uses [Bootstrap blockquotes](https://getbootstrap.com/docs/4.3/content/typography/#blockquotes) to format your blockquotes nicely. Pass the quote inside the shortcode. The `author` argument is optional.
+Uses [Bootstrap blockquotes](https://getbootstrap.com/docs/4.4/content/typography/#blockquotes) to format your blockquotes nicely. Pass the quote inside the shortcode. The `author` argument is optional.
 
 [Here's an actual usage](https://raw.githubusercontent.com/obar/scss-bootstrap-hugo-theme/master/exampleSite/content/post/quotes-by-carl-jung.md), and here's an example usage:
 
@@ -87,7 +87,7 @@ Knowing your own darkness is the best method for dealing with the darknesses of 
 
 ### bootstrap-table
 
-Uses [Bootstrap tables](https://getbootstrap.com/docs/4.3/content/tables/) to format your tables nicely. Pass the markdown table inside the shortcode, then pass the classes as an argument.
+Uses [Bootstrap tables](https://getbootstrap.com/docs/4.4/content/tables/) to format your tables nicely. Pass the markdown table inside the shortcode, then pass the classes as an argument.
 
 [Here's an actual usage](https://raw.githubusercontent.com/obar/scss-bootstrap-hugo-theme/master/exampleSite/content/post/style-a-markdown-table-with-bootstrap-classes-in-hugo.md), and here's an example usage:
 
@@ -103,7 +103,7 @@ Uses [Bootstrap tables](https://getbootstrap.com/docs/4.3/content/tables/) to fo
 
 ### bootstrap-card
 
-Uses [Bootstrap cards](https://getbootstrap.com/docs/4.3/components/card/) and [Hugo image processing](https://gohugo.io/content-management/image-processing/#readout) to display your [page bundle](https://gohugo.io/content-management/page-bundles/) images nicely. Only the `img`, `command`, and `options` arguments are required.
+Uses [Bootstrap cards](https://getbootstrap.com/docs/4.4/components/card/) and [Hugo image processing](https://gohugo.io/content-management/image-processing/#readout) to display your [page bundle](https://gohugo.io/content-management/page-bundles/) images nicely. Only the `img`, `command`, and `options` arguments are required.
 
 [Here's an actual usage](https://raw.githubusercontent.com/obar/scss-bootstrap-hugo-theme/master/exampleSite/content/post/nasa-images/index.md), and here's an example usage:
 
