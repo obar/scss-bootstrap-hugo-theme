@@ -74,23 +74,23 @@ Homepage content goes here.
 
 ## Shortcodes
 
-### bootstrap-blockquote
+### blockquote
 
 Uses [Bootstrap blockquotes](https://getbootstrap.com/docs/4.3/content/typography/#blockquotes) to format your blockquotes nicely. Pass the quote inside the shortcode. The `author` argument is optional.
 
 [Here's an actual usage](https://raw.githubusercontent.com/zwbetz-gh/vanilla-bootstrap-hugo-theme/master/exampleSite/content/post/quotes-by-carl-jung.md), and here's an example usage:
 
 ```
-{{< bootstrap-blockquote author="Carl Jung" >}}
+{{< blockquote author="Carl Jung" >}}
 Knowing your own darkness is the best method for dealing with the darknesses of other people.
-{{< /bootstrap-blockquote >}}
+{{< /blockquote >}}
 ```
 
 ### bootstrap-table
 
 Uses [Bootstrap tables](https://getbootstrap.com/docs/4.3/content/tables/) to format your tables nicely. Pass the markdown table inside the shortcode, then pass the classes as an argument.
 
-[Here's an actual usage](https://raw.githubusercontent.com/zwbetz-gh/vanilla-bootstrap-hugo-theme/master/exampleSite/content/post/style-a-markdown-table-with-bootstrap-classes-in-hugo.md), and here's an example usage:
+[Here's an actual usage](https://raw.githubusercontent.com/obar/scss-bootstrap-hugo-theme/master/exampleSite/content/post/style-a-markdown-table-with-bootstrap-classes-in-hugo.md), and here's an example usage:
 
 ```
 {{< bootstrap-table "table table-dark table-striped table-bordered" >}}
