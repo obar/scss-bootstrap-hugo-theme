@@ -68,7 +68,7 @@ By default the homepage uses the `homeText` param for content. If you wish to pr
 title: Home
 ---
 
-Homepage content goes here. 
+Homepage content goes here.
 ```
 
 ## Shortcodes
@@ -108,14 +108,14 @@ Uses [Bootstrap cards](https://getbootstrap.com/docs/4.3/components/card/) and [
 [Here's an actual usage](https://raw.githubusercontent.com/obar/scss-bootstrap-hugo-theme/master/exampleSite/content/post/nasa-images/index.md), and here's an example usage:
 
 ```
-{{< bootstrap-card 
-img="sun.jpg" 
-command="Resize" 
-options="700x" 
+{{< bootstrap-card
+img="sun.jpg"
+command="Resize"
+options="700x"
 title="The Sun"
 text="The Sun is the star at the center of the Solar System."
-alt="sun" 
-class="mb-3" 
+alt="sun"
+class="mb-3"
 style="" >}}
 ```
 
