@@ -1,0 +1,12 @@
+#nav a {
+  font-weight: bold;
+  color: inherit;
+}
+#nav a.nav-link-active {
+  background-color: $primary;
+  color: $white;
+}
+#nav-border {
+  border-bottom: 1px solid $primary;
+  margin-bottom: $spacer;
+}

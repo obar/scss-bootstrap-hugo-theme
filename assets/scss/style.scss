@@ -12,5 +12,9 @@
 @import 'bootstrap/type';
 @import 'bootstrap/buttons';
 @import "bootstrap/images";
+
+// Include this if you want the additional nav styling with the theme
+@import 'theme_default_nav';
+
 // Now import any of your own customizations to bootstrap styling
 @import 'bootstrap_ext/images';

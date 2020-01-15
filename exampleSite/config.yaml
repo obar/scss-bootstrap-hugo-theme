@@ -38,7 +38,6 @@ menu:
 params:
   includeBootstrapJs: false
   showActiveNav: true
-  containerMaxWidth: 700px
   dateFormat: Jan 2, 2006
   homeText: Welcome to the Vanilla theme demo. Have a look around. Maybe even eat some ice cream.
   footerText: Made with [Hugo](https://gohugo.io/) & [SCSS Bootstrap](https://github.com/obar/scss-bootstrap-hugo-theme/)
