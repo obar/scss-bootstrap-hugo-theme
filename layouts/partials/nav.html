@@ -1,6 +1,7 @@
 <div id="nav-border" class="container">
   <nav id="nav" class="nav justify-content-center">
   {{ $showActiveNav := .Site.Params.showActiveNav }}
+  {{ $includeNavIcons := .Site.Params.includeNavIcons }}
   {{ $currentPage := . }}
   {{ range .Site.Menus.nav }}
     {{ $active := "" }}
@@ -10,13 +11,15 @@
       {{ $isMenu = or $isMenu (eq $currentPage.Title .Name) }}
       {{ $isMenu = or $isMenu (and (eq (substr .Name 0 4) "Blog") (eq $currentPage.Section "post")) }}
       {{ $isMenu = or $isMenu (and (eq .Name "Tags") (eq $currentPage.Section "tags")) }}
-      {{ if $isMenu }} 
+      {{ if $isMenu }}
         {{ $active = "nav-link-active" }}
-      {{ end }}  
-    {{ end }}  
-    {{ $icon := printf "<i data-feather=\"%s\"></i>" .Pre }}
-    {{ $text := print $icon " " .Name | safeHTML }}
-    <a class="nav-link {{ $active }}" href="{{ .URL }}">{{ $text }}</a>
+      {{ end }}
+    {{ end }}
+    <a class="nav-link {{ $active }}" href="{{ .URL }}">
+      {{ if eq $includeNavIcons true }}
+        <i data-feather={{ .Pre }}></i>&nbsp;
+      {{ end }}
+    {{ .Name }}</a>
   {{ end }}
   </nav>
 </div>

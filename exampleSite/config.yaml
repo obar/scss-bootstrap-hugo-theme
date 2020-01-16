@@ -37,6 +37,9 @@ menu:
 
 params:
   includeBootstrapJs: false
+  includeFeatherJs: true
+# To use includeNavIcons, includeFeatherJs must also be true
+  includeNavIcons: true
   showActiveNav: true
   dateFormat: Jan 2, 2006
   homeText: Welcome to the Vanilla theme demo. Have a look around. Maybe even eat some ice cream.
