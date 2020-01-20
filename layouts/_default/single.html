@@ -4,7 +4,7 @@
 
 {{ with .Params.tags }}
   <div class="taglist">
-    <i data-feather="tag"></i>
+    {{ if eq $.Site.Params.includeFeatherJs true }}<i data-feather="tag"></i>{{ end }}
     {{ range sort . }}
       {{ $href := print (absURL "tags/") (urlize .) }}
       <a class="btn btn-sm btn-outline-dark tag-btn" href="{{ $href }}">{{ . }}</a>
