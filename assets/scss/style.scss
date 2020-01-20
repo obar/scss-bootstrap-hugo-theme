@@ -17,6 +17,16 @@
 
 // Include this if you want the additional nav styling with the theme
 @import 'theme_default_nav';
+@import 'theme_default_footer';
 
 // Now import any of your own customizations to bootstrap styling
 @import 'bootstrap_ext/images';
+@import 'bootstrap_ext/headings';
+
+// Import a _custom.scss file for quick stylesheet updates
+// By default this contains the styling for inline code elements rather than
+// @import-ing all of Bootstrap's code components, as hugo does syntax
+// highlighting for us anyway
+//
+// To learn more, read the Customization section in the README
+@import 'custom';

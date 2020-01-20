@@ -1,12 +1,13 @@
 # SCSS Bootstrap
 
-A vanilla [Bootstrap](https://getbootstrap.com/) theme for [Hugo](https://gohugo.io/). This is a fork of [a different theme](https://github.com/zwbetz-gh/vanilla-bootstrap-hugo-theme/), extending it to use Hugo Pipes for processing Bootstrap's Sass files for easier theme customization. The benefits include:
+A bare-bones [Bootstrap](https://getbootstrap.com/) theme for [Hugo](https://gohugo.io/), a great starting point for making a fast site with your own styling and no extra bulk. This is a fork of [a different theme](https://github.com/zwbetz-gh/vanilla-bootstrap-hugo-theme/), extending it to use Hugo Pipes for processing Bootstrap's Sass files for easier theme customization. The benefits include:
 
 * Use variables to make global style changes in multiple places—things like [colors](https://getbootstrap.com/docs/4.4/getting-started/theming/#color) and [margins](https://getbootstrap.com/docs/4.4/getting-started/theming/#sass-options) can be consistent with a change in a single place
 * Better organization of base styles and customization
 * Automatically generate one minified css file for your whole site, with no additional dependencies
 * Can include only css for functionality you are interested in—no need to import components you don't use in your site
 
+Read more in the [customization](#customization) section below.
 
 ## Table of Contents
 
@@ -15,6 +16,7 @@ A vanilla [Bootstrap](https://getbootstrap.com/) theme for [Hugo](https://gohugo
 * [Updating](#updating)
 * [Run example site](#run-example-site)
 * [Configuration](#configuration)
+* [Customization](#customization)
 * [Homepage content](#homepage-content)
 * [Shortcodes](#shortcodes)
     * [bootstrap-blockquote](#bootstrap-blockquote)
@@ -58,6 +60,21 @@ hugo server --themesDir ../..
 ## Configuration
 
 Copy `config.yaml` from the [`exampleSite`](https://github.com/obar/scss-bootstrap-hugo-theme/tree/master/exampleSite), then edit as desired.
+
+## Customization
+The combination of Hugo's easy overrides to files in `assets` and `layout`, as well as Bootstrap's SCSS code, make this a starting point theme for you to build with.
+
+For quickly getting going with stylesheet tweaks, copy the files `assets/scss/_custom.scss` and `assets/scss/_variables.scss` from the theme root to your site root. Editing just these files, you have most of your site ready to go. For 99% of uses I suspect that's all one will need to do.
+
+A file in your own `assets/scss` directory called `_theme_default_nav.scss` or `_theme_default_footer.scss` can override those default styles from the theme. Even if you don't want to change these, they are worth looking at for examples of extending scss files if you aren't already familiar. You might also want to copy `layouts/` files to your own site root for customizing, for instance the `nav.html` partial to change how the top of the site looks.
+
+For more advanced customization, for instance excluding parts of Bootstrap that you aren't using in your site, copy `assets/scss/style.scss` to your site root in the same way and comment out the `@import` lines you aren't interested in. The same example as seen in that file of using `bootstrap_ext/_{category}.scss` extensions can be used to organize themes with more complex parts.
+
+You can remove JS dependencies by configuration by setting the following site parameters in your `config.[yaml/toml]` file:
+ * `includeBootstrapJs `
+ * `includeFeatherJs`
+ * `includeNavIcons`
+
 
 ## Homepage content
 
@@ -128,4 +145,5 @@ If you run into an issue that isn't answered by this documentation, then visit t
 In addition to Bootstrap and Hugo, thank you to:
 
 * [Feather](https://feathericons.com/) for icons
-* [zwbetz-gh](https://github.com/zwbetz-gh/vanilla-bootstrap-hugo-theme/) for creating the initial theme
+* [zwbetz-gh](https://github.com/zwbetz-gh/) for creating the initial theme
+* [neexee](https://github.com/neexee/) for enhancements from his fork of the same initial theme

@@ -1,0 +1,10 @@
+:not(pre)>code {
+  @extend .badge;
+  font-size: $code-font-size;
+  background: $gray-200;
+  font-weight: inherit;
+}
+
+code, .pre {
+  font-size: $code-font-size;
+}

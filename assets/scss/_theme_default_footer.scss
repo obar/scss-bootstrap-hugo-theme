@@ -1,0 +1,9 @@
+#footer {
+  a {
+    @extend .text-muted;
+  }
+  .container {
+    @extend .p-3;
+    @extend small;
+  }
+}

@@ -1,9 +1,9 @@
 {{ define "main" }}
 
-<h1>{{ .Title }}</h1>
+<h1 class="scss--title scss--list-title">{{ .Title }}</h1>
 
 {{ range .Pages.ByPublishDate.Reverse }}
-<p>
+<p class="scss--list-item">
   <a class="font-125" href="{{ .Permalink }}">{{ .Title }}</a>
   <br>
   {{ partial "date-and-tags.html" . }}
