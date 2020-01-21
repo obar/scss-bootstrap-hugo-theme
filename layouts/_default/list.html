@@ -2,6 +2,7 @@
 
 <h1 class="scss--title scss--list-title">{{ .Title }}</h1>
 
+<div class="list-index-content">{{ .Content }}</div>
 {{ range .Pages.ByPublishDate.Reverse }}
 <p class="scss--list-item">
   <a class="font-125" href="{{ .Permalink }}">{{ .Title }}</a>
