@@ -15,3 +15,14 @@ img[src$='#floatright']
   float:right;
   margin: 0.7rem;
 }
+
+figure {
+  img {
+    @extend .img-fluid;
+  }
+  figcaption {
+    color: $gray-600;
+    font-style: italic;
+    @extend .pl-3;
+  }
+}
